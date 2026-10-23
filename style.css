@@ -1,0 +1,816 @@
+
+/* 1. PENGATURAN DASAR */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #eee;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* 2. NAVIGASI */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #111;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span,
+footer span {
+    color: #999;
+}
+
+.menu a {
+    margin-left: 25px;
+    color: #bbb;
+    font-size: 14px;
+    text-decoration: none; /* Cegah garis bawah bawaan browser/Bootstrap */
+}
+
+.menu a:hover,
+.menu a:focus,
+.menu a:active {
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+
+/* 3. BAGIAN HERO */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 80px 10%;
+    min-height: 500px;
+    background: #181818;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.label {
+    color: #999;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #999;
+}
+
+.deskripsi {
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+.hero-foto img {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border: 1px solid #555;
+    border-radius: 10px;
+}
+
+.tombol {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 12px 22px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.tombol-outline {
+    background: transparent;
+    color: white;
+    border: 1px solid #777;
+}
+
+.tombol:hover {
+    background: #ccc;
+    color: black;
+}
+
+
+/* 4. BAGIAN SECTION */
+
+.section {
+    padding: 70px 10%;
+}
+
+.section-dark {
+    background: #181818;
+}
+
+.judul-section {
+    margin-bottom: 35px;
+}
+
+.judul-section p {
+    color: #888;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.judul-section h2 {
+    font-size: 32px;
+    margin-top: 8px;
+}
+
+
+/* 5. PROFIL */
+
+.profil-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+}
+
+.profil-text h3,
+.profil-info h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.profil-text p {
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #444;
+    font-size: 14px;
+}
+
+th {
+    color: #999;
+    width: 40%;
+}
+
+
+/* 6. PENDIDIKAN */
+
+.tabel-data th {
+    background: #252525;
+    color: white;
+}
+
+.tabel-data td {
+    color: #ccc;
+}
+
+
+/* 7. PENGALAMAN */
+
+.pengalaman-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 30px;
+    padding: 25px 0;
+    border-bottom: 1px solid #333;
+}
+
+.tahun {
+    color: #999;
+    font-weight: bold;
+}
+
+.pengalaman-detail h3 {
+    font-size: 21px;
+}
+
+.subjudul {
+    color: #999;
+    margin: 5px 0 15px;
+}
+
+.pengalaman-detail ul {
+    padding-left: 20px;
+    color: #bbb;
+}
+
+
+/* 8. KETERAMPILAN */
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 25px;
+    background: #222;
+    border: 1px solid #383838;
+    border-radius: 8px;
+}
+
+.skill-card span {
+    color: #888;
+    font-size: 13px;
+}
+
+.skill-card h3 {
+    margin: 10px 0;
+}
+
+.skill-card p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+
+/* 9. KEAHLIAN PERSONAL */
+
+.personal-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.personal-list span {
+    border: 1px solid #555;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #ccc;
+}
+
+
+/* 10. KONTAK DAN FORM */
+
+.kontak-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+}
+
+.kontak-info h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.kontak-info p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.kontak-info strong {
+    color: white;
+}
+
+.form-kontak label {
+    display: block;
+    margin: 12px 0 6px;
+}
+
+.form-kontak input,
+.form-kontak select,
+.form-kontak textarea {
+    width: 100%;
+    padding: 13px;
+    background: #111;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.form-kontak button {
+    margin-top: 20px;
+    padding: 13px 25px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-kontak button:hover {
+    background: #ccc;
+}
+
+
+/* 11. FOOTER */
+
+footer {
+    text-align: center;
+    padding: 35px;
+    background: #111;
+    border-top: 1px solid #333;
+}
+
+footer h3 {
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+footer p {
+    color: #888;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+
+/* 12. RESPONSIVE UNTUK HP */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .menu a {
+        margin: 0;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 50px 7%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-foto img {
+        width: 220px;
+        height: 270px;
+    }
+
+    .section {
+        padding: 45px 7%;
+    }
+
+    .profil-layout,
+    .kontak-layout,
+    .pengalaman-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
+#tombolAtas {
+    display: none;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #555;
+    border-radius: 50%;
+    background: white;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#tombolAtas:hover {
+    background: #ccc;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s ease;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* =================================
+   ANIMASI DAN INTERAKSI
+================================= */
+
+/* Animasi muncul saat halaman dibuka */
+
+.hero-text,
+.hero-foto {
+    animation: muncul 0.9s ease forwards;
+}
+
+.hero-foto {
+    animation-delay: 0.2s;
+}
+
+@keyframes muncul {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Foto lebih interaktif */
+
+.hero-foto img {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.hero-foto img:hover {
+    transform: scale(1.04) rotate(1deg);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+
+/* =================================
+   INTERAKSI TABEL
+================================= */
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+th,
+td {
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+
+/* Baris tabel ketika cursor diarahkan */
+
+tbody tr {
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease;
+}
+
+tbody tr:hover {
+    background-color: #2a2a2a;
+    transform: translateX(6px);
+}
+
+
+/* Isi tabel ikut berubah */
+
+tbody tr:hover td {
+    color: white;
+}
+
+
+/* =================================
+   CARD SKILL
+================================= */
+
+.skill-card {
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: #777;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.35);
+}
+
+
+/* =================================
+   PENGALAMAN
+================================= */
+
+.pengalaman-card {
+    transition:
+        transform 0.3s ease,
+        padding-left 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.pengalaman-card:hover {
+    transform: translateX(8px);
+    padding-left: 15px;
+    background-color: #1d1d1d;
+}
+
+
+/* =================================
+   TOMBOL
+================================= */
+
+.tombol,
+.form-kontak button {
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.tombol:hover,
+.form-kontak button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+
+/* =================================
+   WHATSAPP
+================================= */
+
+.whatsapp-button {
+    margin-top: 10px;
+}
+
+
+/* =================================
+   INPUT FORM
+================================= */
+
+.form-kontak input,
+.form-kontak textarea {
+    transition:
+        border-color 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.form-kontak input:focus,
+.form-kontak textarea:focus {
+    outline: none;
+    border-color: #aaa;
+    background-color: #181818;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.05);
+}
+
+
+/* =================================
+   PERSONAL SKILL
+================================= */
+
+.personal-list span {
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.personal-list span:hover {
+    transform: translateY(-4px);
+    background-color: white;
+    color: black;
+}
+
+
+/* =================================
+   NAVBAR
+================================= */
+
+.menu a {
+    position: relative;
+    transition: color 0.25s ease;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 1px;
+    background: white;
+    transition: width 0.25s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+
+/* =================================
+   SCROLL REVEAL
+================================= */
+
+.section {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =================================
+   TOMBOL KEMBALI KE ATAS
+================================= */
+
+#tombolAtas {
+    display: none;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid #555;
+    border-radius: 50%;
+
+    background: white;
+    color: black;
+
+    font-size: 20px;
+    cursor: pointer;
+
+    z-index: 1000;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease;
+}
+
+#tombolAtas:hover {
+    transform: translateY(-5px);
+    background-color: #ccc;
+}
+
+/* 13. PENYEMPURNAAN MINIMALIS */
+:root {
+    color-scheme: dark;
+    scroll-padding-top: 24px;
+}
+
+::selection {
+    background: #eeeeee;
+    color: #111111;
+}
+
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 38px;
+    padding: 8px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 2px;
+    margin: 4px 0;
+    background: #eeeeee;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.tombol:focus-visible,
+.menu a:focus-visible,
+.menu-toggle:focus-visible,
+.form-kontak button:focus-visible,
+#tombolAtas:focus-visible {
+    outline: 2px solid #eeeeee;
+    outline-offset: 4px;
+}
+
+.hero-foto img {
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .28);
+}
+
+.skill-card, .profil-info, .kontak-info, .form-kontak {
+    border-color: #353535;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 19px;
+        letter-spacing: 1.5px;
+    }
+
+    .menu-toggle {
+        display: block;
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .menu {
+        display: none;
+        grid-column: 1 / -1;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding-top: 8px;
+        border-top: 1px solid #2d2d2d;
+    }
+
+    .menu.menu-open {
+        display: flex;
+    }
+
+    .menu a {
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid #252525;
+    }
+
+    .hero {
+        min-height: auto;
+        gap: 28px;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 8vw, 40px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
